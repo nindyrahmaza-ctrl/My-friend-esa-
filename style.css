@@ -1,0 +1,155 @@
+/* Reset Style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: #090514;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container Glassmorphism */
+.card-container {
+    position: relative;
+    width: 90%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 28px;
+    padding: 40px 25px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    z-index: 2;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Efek Glow Bulat di Belakang Layar */
+.glow-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    filter: blur(95px);
+    z-index: -1;
+}
+.top-left {
+    background: #b60dfb; /* Neon Purple */
+    top: -40px;
+    left: -40px;
+}
+.bottom-right {
+    background: #ff007f; /* Cyber Pink */
+    bottom: -40px;
+    right: -40px;
+}
+
+/* Kontrol Tampilan Slide */
+.slide {
+    display: none; /* Sembunyikan slide bawaan */
+    opacity: 0;
+    transform: scale(0.95);
+    transition: all 0.5s ease-in-out;
+}
+
+.slide.active {
+    display: block; /* Tampilkan slide yang aktif */
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animasi Emoji Melayang */
+.main-emoji {
+    font-size: 4.5rem;
+    display: inline-block;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Teks Styling */
+.title {
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-top: 15px;
+    letter-spacing: -0.5px;
+}
+
+.message {
+    color: #b7b0cc;
+    font-size: 0.95rem;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* Styling Tombol */
+.btn {
+    margin-top: 25px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-size: 0.95rem;
+    display: inline-block;
+}
+
+/* Tombol Lanjut (Next) */
+.btn-next, .btn-primary {
+    background: linear-gradient(135deg, #b60dfb, #ff007f);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.3);
+}
+
+.btn-next:hover, .btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 0, 127, 0.6);
+}
+
+/* Tombol Nggak Mau */
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+/* Efek Konfeti */
+.confetti {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    animation: fall 2.5s linear forwards;
+    z-index: 999;
+}
+
+/* Keyframes */
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-8px) rotate(3deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
