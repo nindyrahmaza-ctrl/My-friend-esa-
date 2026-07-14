@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD ESA! 🎂✨</title>
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts untuk font modern & estetik -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Container Utama (Glassmorphism) -->
+    <div class="card-container">
+        <!-- Ornamen Glow di Background -->
+        <div class="glow-circle top-left"></div>
+        <div class="glow-circle bottom-right"></div>
+
+        <!-- Wadah Utama Slide -->
+        <div class="slide-container">
+            
+            <!-- SLIDE 1: Pembuka -->
+            <div class="slide active" id="slide-1">
+                <span class="main-emoji">👀</span>
+                <h1 class="title">Eh, Esa...</h1>
+                <p class="message">Aku punya sesuatu buat lo. Coba klik tombol di bawah deh!</p>
+                <button class="btn btn-next" onclick="nextSlide(2)">Buka Dong ✨</button>
+            </div>
+
+            <!-- SLIDE 2: Ucapan Ulang Tahun -->
+            <div class="slide" id="slide-2">
+                <span class="main-emoji">🎂</span>
+                <h1 class="title">Happy Birthday! 🎉</h1>
+                <p class="message">Selamat bertambah usia dan memulai lembaran baru yang lebih seru! Semoga semua impian dan target lo di tahun ini bisa tercapai satu per satu ya, Sa.</p>
+                <button class="btn btn-next" onclick="nextSlide(3)">Next 💫</button>
+            </div>
+
+            <!-- SLIDE 3: Apresiasi Teman -->
+            <div class="slide" id="slide-3">
+                <span class="main-emoji">🤜🤛</span>
+                <h1 class="title">Bestie Ter-solid!</h1>
+                <p class="message">Makasih ya udah selalu jadi teman yang seru, pendengar yang baik, dan partner yang bisa diandalin. Bersyukur banget bisa kenal sama lo!</p>
+                <button class="btn btn-next" onclick="nextSlide(4)">Satu lagi... 🤫</button>
+            </div>
+
+            <!-- SLIDE 4: Doa & Penutup -->
+            <div class="slide" id="slide-4">
+                <span class="main-emoji" id="final-emoji">🪐</span>
+                <h1 class="title" id="final-title">Sehat & Bahagia Selalu!</h1>
+                <p class="message" id="final-message">Semoga hari-hari lo ke depan selalu dikelilingi energi positif dan hal-hal baik. Tetap jadi Esa yang keren ya!</p>
+                
+                <!-- Tombol Interaksi Akhir -->
+                <div class="btn-group" id="final-buttons">
+                    <button class="btn btn-primary" onclick="celebrate()">Aamiin! ❤️</button>
+                    <button id="btn-no" class="btn btn-secondary">Nggak mau Aamiin 😜</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
